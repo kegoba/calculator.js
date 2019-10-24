@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>calculatejs</title>
+
+  <link rel="stylesheet" href="C:\Users\user\Documents\Desktop\calculatorjs\bootstrap-4.0.0\dist\css\bootstrap.min.css">
+  <style>
+  .container{
+    text-align: center;
+    align-content: center;
+    background-color: black;
+    background-position: center;
+  }
+  #form1{
+    width: 500px;
+    float: 2px left;
+    align-content: right;
+
+  }
+  .btn{
+    width: 45px;
+    margin: -10px;
+  }
+  #answer{
+    width: 85%;
+    height: 50px;
+    border-radius: 2px;
+    border: 2px solid;
+  }
+  </style>
+
+</head>
+<body>
+</br> </br>
+  <div class="container">
+    <form id="form1">
+           <div class"input">
+           <div class="row">
+             <div class="col"> <input type="text" id="answer" disabled placeholder="0" stronge> </div>
+            </div>
+          </div> </br>
+          <div class="container">
+         <div class="row">
+              <div class="col">  <button type="button" class="btn btn-danger" value="mrc" onclick='c("mrc")' > mrc </button> </div>
+              <div class="col">  <button type="button" class="btn btn-danger"  value="m-" onclick='c("m-")' > m- </button>  </div>
+              <div class="col">  <button type="button" class="btn btn-danger"  value="clear" onclick='c("m+")' > m+ </button> </div>
+              <div class="col">  <button type="button" class="btn btn-primary" class="opt" value="/" onclick='v("/")'> /  </button> </div>
+            </div>
+          </div> </br>
+          <div class="container">
+            <div class="row">
+               <div class="col">  <button type="button" class="btn btn-success" value="7" onclick='v("7")'> 7 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-success" value="8" onclick='v("8")' > 8 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-success" value="9" onclick='v("9")' > 9 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-primary" class="opt" value="*" onclick='v("*")' > *  </button> </div>
+             </div>
+          </div> </br>
+          <div class="container">
+            <div class="row">
+               <div class="col">  <button type="button" class="btn btn-success"  value="4" onclick='v("4")'> 4 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-success"  value="5" onclick='v("5")' > 5 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-success"  value="6" onclick='v("6")' > 6 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-primary"  class="opt"  value="+" onclick='v("+")' > +  </button> </div>
+             </div>
+          </div> </br>
+          <div class="container">
+            <div class="row">
+               <div class="col">  <button type="button" class="btn btn-success" value="1" onclick='v("1")'> 1  </button> </div>
+               <div class="col">  <button type="button" class="btn btn-success" value="2" onclick='v("2")' > 2 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-success" value="3" onclick='v("3")' > 3 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-primary" class="opt" value="-" onclick='v("-")' > -  </button> </div>
+             </div>
+          </div> </br>
+          <div class="container">
+            <div class="row">
+               <div class="col">  <button type="button" class="btn btn-success" value="0" onclick='v("0")'> 0 </button> </div>
+               <div class="col">  <button type="button" class="btn btn-success" class="opt"  value="." onclick='v(".")'> . </button> </div>
+               <div class="col">  <button type="button" class="btn btn-success" id="cls"  onclick="cls_func()" > C </button> </div>
+               <div class="col">  <button type="button" class="btn btn-primary" value="equal" onclick='equal("")' > =  </button> </div>
+             </div>
+          </div> </br>
+
+    </form>
+
+  </div>
+
+
+
+  <script type="text/javascript">
+	 operat1 = 0
+   var input
+  state = 0
+var _operators = document.getElementsByClassName('opt')
+_operators=0
+  function display(val){
+
+      document.getElementById("answer").value = val
+  }
+
+  function v(val) {
+      if (state == 1) cls_func();
+			if (_operators == 1) cls_func();
+      document.getElementById("answer").value += val
+  }
+  function equal() {
+        display(eval(document.getElementById("answer").value))
+        state = 1
+				_operators = 1
+
+}
+
+
+  function cls_func() {
+        document.getElementById("answer").value = ''
+        state = 0
+			  _operators = 0
+   }
+
+  </script>
+
+
+</body>
+</html>

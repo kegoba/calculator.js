@@ -1,0 +1,610 @@
+
+<DOCTYPE html>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+  	<meta charset="UTF-8">
+  	<title>result processing</title>
+    <style>
+#btr{
+  width: 100px;
+}
+  #form1{
+      width: 900px;
+      height: 400px;
+     text-align:  center;
+    }
+    .myinput{
+      width: 100px;
+    }
+    </style>
+	<link rel="stylesheet" href="C:\Users\user\Documents\Desktop\calculatorjs\bootstrap-4.0.0\dist\css\bootstrap.min.css">
+</head>
+  <body> </br>
+    <form id="form1" onsubmit="button1">
+    <div class="container">
+    		<div class="row">
+    			<div class="col"> <button type="button" class="btn btn-success" id="btr" > COURSE CODE </button> </div>
+    			<div class="col"> <button type="button" class="btn btn-success" id="btr"> SCORES </button> </div>
+          	<div class="col"> <button type="button" class="btn btn-success" id="btr"> UNITS </button> </div>
+    			<div class="col"> <button type="button" class="btn btn-success" id="btr"> GRADES  </button> </div>
+        	<div class="col"> <button type="button" class="btn btn-success" id="btr"> POINTS</button> </div>
+    		</div> </br>
+    </div>
+   <div class="container">
+ 		<div class="row">
+  			<div class="col">   <input type="text"  id="coursecode" class="myinput"> 	</div>
+  			<div  class="col">  <input type="text" id="score1" onchange="myresult1()" class="myinput" >  </div>
+        <div class="col">   <input type="Number" id="unit1" class="myinput"> 	</div>
+  			<div class="col">   <input type="text" id="grade1" disabled class="myinput">    </div>
+        <div class="col">   <input type="text" id="point1" disabled class="myinput"> </div>
+  		</div>
+   </div>  </br>
+   <div class="container">
+      		<div class="row">
+      			<div class="col">   <input type="text" id="coursecode" class="myinput"> 	</div>
+      			<div  class="col">  <input type="int" id="score2" onchange="myresult2()" class="myinput" >  </div>
+            <div class="col">   <input type="Number" id="unit2" class="myinput"> 	</div>
+      			<div class="col">   <input type="text" id="grade2" disabled class="myinput"> </div>
+            <div class="col">   <input type="text" id="point2" disabled class="myinput"></div>
+      		</div>
+    </div>  </br>
+   <div class="container">
+  	<div class="row">
+    		<div class="col">   <input type="text" id="coursecode" class="myinput"> 	</div>
+    		<div  class="col">  <input type="int" id="score3" onchange="myresult3()" class="myinput" >  </div>
+        <div class="col">   <input type="Number" id="unit3" class="myinput"> 	</div>
+    		<div class="col">   <input type="text" id="grade3" disabled class="myinput"> </div>
+        <div class="col">   <input type="text" id="point3" disabled class="myinput"> </div>
+  	</div>
+   </div> </br>
+  <div class="container">
+    <div class="row">
+      <div class="col">   <input type="text" id="coursecode" class="myinput"> 	</div>
+      <div  class="col">  <input type="int" id="score4" onchange="myresult4()" class="myinput" >  </div>
+      <div class="col">   <input type="Number" id="unit4" class="myinput"> 	</div>
+      <div class="col">   <input type="text" id="grade4" disabled class="myinput"> </div>
+      <div class="col">   <input type="text" id="point4" disabled class="myinput"> </div>
+    </div>
+  </div>   </br>
+  <div class="container">
+  		<div class="row">
+  			<div class="col">   <input type="text" id="coursecode" class="myinput"> 	</div>
+  			<div  class="col">  <input type="int" id="score5" onchange="myresult5()" class="myinput"> </div>
+        <div class="col">   <input type="Number" id="unit5" class="myinput"> 	</div>
+  			<div class="col">   <input type="text" id="grade5" disabled class="myinput"> </div>
+        <div class="col">   <input type="text" id="point5" disabled class="myinput"> </div>
+  		</div>
+   </div>  </br>
+   <div class="container">
+    		<div class="row">
+    			<div class="col">   <input type="text" id="coursecode" class="myinput"> 	</div>
+    			<div  class="col">  <input type="int" id="score6" onchange="myresult6()" class="myinput">  </div>
+          <div class="col">   <input type="Number" id="unit6" class="myinput"> 	</div>
+    			<div class="col">   <input type="text" id="grade6" disabled class="myinput"> </div>
+          <div class="col">   <input type="text" id="point6" disabled class="myinput"> </div>
+    		</div>
+   </div>  </br>
+   <div class="container">
+  		<div class="row">
+  			<div class="col">   <input type="text" id="coursecode" class="myinput"> 	</div>
+  			<div  class="col">  <input type="int" id="score7" onchange="myresult7()" class="myinput" >  </div>
+        <div class="col">   <input type="Number" id="unit7" class="myinput"> 	</div>
+  			<div class="col">   <input type="text" id="grade7" disabled class="myinput"> </div>
+        <div class="col">   <input type="text" id="point7" disabled class="myinput"> </div>
+  		</div>
+  </div>
+</div></br> </br>
+<div class="container">
+  <div class="row">
+    <div class="col"> <button type="button" class="btn btn-success" id="btr" onclick="button1()">CACULATE </button> </div>
+    <div class="col"> <button type="button" class="btn btn-success" id="btr" onclick="button2()"> CLEAR </button> </div>
+      <div class = "col"> <input id="gpa" value=" CGPA =>" disabled class="myinput">  </p>  </div>
+    <div class="col">   <input type="text" id="result" disabled class="myinput"> </div>
+ </div>
+</div>
+</form>
+    </body>
+<script type="text/javascript">
+         // programe for computations
+
+//program to display the first course
+  function myresult1() {
+    var grade1 ; point1; score1 ;
+  //  var point1 = point.tofixed(2)
+    if ( (score1.value >= 70) && (score1.value < 101 ) )  {
+          grade1 = "A"
+          point1 = "5.0"
+          document.getElementById("grade1").value = grade1
+          document.getElementById("point1").value = point1
+
+      }
+      else if( (score1.value >= 60 ) && (score1.value < 69)  )  {
+             grade1 = "B"
+             point1 = "4.0"
+             document.getElementById("grade1").value = grade1
+             document.getElementById("point1").value = point1
+
+      }
+
+      else if ((score1.value >= 50 ) && (score1.value <59)) {
+          grade1 = "C"
+          point1 = "3.0"
+          document.getElementById("grade1").value = grade1
+          document.getElementById("point1").value = point1
+      }
+
+      else if( (score1.value >= 40 ) && (score1.value <49) )  {
+              grade1 = "D"
+              point1 = "2.0"
+              document.getElementById("grade1").value = grade1
+              document.getElementById("point1").value = point1
+      }
+      else if ((score1.value >= 30 ) && (score1.value<39))  {
+            grade1 = "D"
+            point1 = "1.0"
+            document.getElementById("grade1").value = grade1
+            document.getElementById("point1").value = point1
+      }
+      else if ((score1.value >= 0 ) && (score1.value < 29)) {
+          grade1 = "F"
+          point1 = "0.0"
+          document.getElementById("grade1").value = grade1
+          document.getElementById("point1").value = point1
+
+
+      }
+      else if (score1.value >100)  {
+         document.getElementById("score1").value =""
+         document.getElementById("grade1").value = ""
+         document.getElementById("point1").value = ""
+
+         alert("PLEASE ENTER A VALID NUMBER")
+         }
+       else if (isNaN(score1.value)) {
+          alert("PLEASE ENTER A VALID NUMBER")
+          document.getElementById("score1").value = ""
+          document.getElementById("grade1").value =""
+          document.getElementById("point1").value = ""
+
+       }
+
+  }
+
+//program to display second grade1
+
+  function myresult2() {
+    var grade2 ; point2; score2 ;
+  //  var point1 = point.tofixed(2)
+    if ( (score2.value >= 70) && (score2.value < 101 ) )  {
+          grade2 = "A"
+          point2 = "5.0"
+          document.getElementById("grade2").value = grade2
+          document.getElementById("point2").value = point2
+
+      }
+      else if( (score2.value >= 60 ) && (score2.value < 69)  )  {
+             grade2 = "B"
+             point2 = "4.0"
+             document.getElementById("grade2").value = grade2
+             document.getElementById("point2").value = point2
+
+      }
+
+      else if ((score2.value >= 50 ) && (score2.value <59)){
+          grade2 = "C"
+          point2 = "3.0"
+          document.getElementById("grade2").value = grade2
+          document.getElementById("point2").value = point2
+
+
+      }
+
+      else if( (score2.value >= 40 ) && (score2.value <49) )  {
+              grade2 = "D"
+              point2 = "2.0"
+              document.getElementById("grade2").value = grade2
+              document.getElementById("point2").value = point2
+      }
+      else if ((score2.value >= 30 ) && (score2.value<39))  {
+            grade2 = "D"
+            point2 = "1.0"
+            document.getElementById("grade2").value = grade2
+            document.getElementById("point2").value = point2
+      }
+      else if ((score2.value >= 0 ) && (score2.value < 29))  {
+            grade2 = "F"
+            point2 = "0.0"
+            document.getElementById("grade2").value = grade2
+            document.getElementById("point2").value = point2
+
+      }
+
+     else if (score2.value > 100)  {
+        document.getElementById("score2").value = ""
+        document.getElementById("grade2").value = ""
+        document.getElementById("point2").value = ""
+        alert("PLEASE ENTER A VALID NUMBER")
+        }
+      else if (isNaN(score2.value)) {
+         alert("PLEASE ENTER A VALID NUMBER")
+         document.getElementById("score2").value =""
+         document.getElementById("grade2").value = ""
+         document.getElementById("point2").value = ""
+      }
+
+  }
+  function myresult3() {
+    var grade3 ; point3; score3 ;
+  //  var point1 = point.tofixed(2)
+    if ( (score3.value >= 70) && (score3.value < 101 ) )  {
+          grade3 = "A"
+          point3 = "5.0"
+          document.getElementById("grade3").value = grade3
+          document.getElementById("point3").value = point3
+
+      }
+      else if( (score3.value >= 60 ) && (score3.value < 69)  )  {
+             grade3 = "B"
+             point3 = "4.0"
+             document.getElementById("grade3").value = grade3
+             document.getElementById("point3").value = point3
+
+      }
+
+      else if ((score3.value >= 50 ) && (score3.value <59)) {
+          grade3 = "C"
+          point3 = "3.0"
+          document.getElementById("grade3").value = grade3
+          document.getElementById("point3").value = point3
+
+
+      }
+
+      else if( (score3.value >= 40 ) && (score3.value <49) )  {
+              grade3= "D"
+              point3 = "2.0"
+              document.getElementById("grade3").value = grade3
+              document.getElementById("point3").value = point3
+      }
+      else if ((score3.value >= 30 ) && (score3.value<39))  {
+            grade3 = "D"
+            point3 = "1.0"
+            document.getElementById("grade3").value = grade3
+            document.getElementById("point3").value = point3
+      }
+      else if ((score3.value >= 0 ) && (score3.value <29)) {
+          grade3 = "F"
+          point3 = "0.0"
+          document.getElementById("grade3").value = grade3
+          document.getElementById("point3").value = point3
+
+      }
+      else if (score3.value >100)  {
+         document.getElementById("score3").value =""
+         document.getElementById("grade3").value = ""
+         document.getElementById("point3").value = ""
+
+         alert("PLEASE ENTER A VALID NUMBER")
+         }
+       else if (isNaN(score3.value)) {
+          alert("PLEASE ENTER A VALID NUMBER")
+          document.getElementById("score3").value =""
+          document.getElementById("grade3").value =""
+          document.getElementById("point3").value =""
+
+       }
+
+  }
+
+  function myresult4() {
+    var grade4 ; point4; score4;
+  //  var point1 = point.tofixed(2)
+    if ( (score4.value >= 70) && (score4.value < 101 ) )  {
+          grade4 = "A"
+          point4 = "5.0"
+          document.getElementById("grade4").value = grade4
+          document.getElementById("point4").value = point4
+
+      }
+      else if( (score4.value >= 60 ) && (score4.value < 69)  )  {
+             grade4 = "B"
+             point4 = "4.0"
+             document.getElementById("grade4").value = grade4
+             document.getElementById("point4").value = point4
+
+      }
+
+      else if ((score4.value >= 50 ) && (score4.value <59)) {
+          grade4 = "C"
+          point4 = "3.0"
+          document.getElementById("grade4").value = grade4
+          document.getElementById("point4").value = point4
+
+
+      }
+
+      else if( (score4.value >= 40 ) && (score4.value <49) )  {
+              grade4 = "D"
+              point4 = "2.0"
+              document.getElementById("grade4").value = grade4
+              document.getElementById("point4").value = point4
+      }
+      else if ((score4.value >= 30 ) && (score4.value<39))  {
+            grade4 = "D"
+            point4 = "1.0"
+            document.getElementById("grade4").value = grade4
+            document.getElementById("point4").value = point4
+      }
+      else if ((score4.value >= 0 ) && (score4.value <29)) {
+          grade4 = "F"
+          point4 = "0.0"
+          document.getElementById("grade4").value = grade4
+          document.getElementById("point4").value = point4
+
+      }
+      else if (score4.value >100)  {
+         document.getElementById("score4").value =""
+         document.getElementById("grade4").value =""
+         document.getElementById("point4").value =""
+         alert("PLEASE ENTER A VALID NUMBER")
+         }
+       else if (isNaN(score4.value)) {
+          alert("PLEASE ENTER A VALID NUMBER")
+          document.getElementById("score4").value =""
+          document.getElementById("grade4").value =""
+          document.getElementById("point4").value =""
+       }
+
+  }
+  function myresult5() {
+    var grade5 ; point5; score5 ;
+  //  var point1 = point.tofixed(2)
+    if ( (score5.value >= 70) && (score5.value < 101 ) )  {
+          grade5 = "A"
+          point5 = "5.0"
+          document.getElementById("grade5").value = grade5
+          document.getElementById("point5").value = point5
+
+      }
+      else if( (score5.value >= 60 ) && (score5.value < 69)  )  {
+             grade5 = "B"
+             point5 = "4.0"
+             document.getElementById("grade5").value = grade5
+             document.getElementById("point5").value = point5
+
+      }
+
+      else if ((score5.value >= 50 ) && (score5.value <59)) {
+          grade5 = "C"
+          point5 = "3.0"
+          document.getElementById("grade5").value = grade5
+          document.getElementById("point5").value = point5
+
+
+      }
+
+      else if( (score5.value >= 40 ) && (score5.value <49) )  {
+              grade5 = "D"
+              point5 = "2.0"
+              document.getElementById("grade5").value = grade5
+              document.getElementById("point5").value = point5
+      }
+      else if ((score5.value >= 30 ) && (score5.value<39))  {
+            grade5 = "D"
+            point5 = "1.0"
+            document.getElementById("grade5").value = grade5
+            document.getElementById("point5").value = point5
+      }
+      else if ((score5.value >= 0 ) && (score5.value <29)) {
+          grade5 = "F"
+          point5 = "0.0"
+          document.getElementById("grade5").value = grade5
+          document.getElementById("point5").value = point5
+
+      }
+      else if (score5.value >100)  {
+         document.getElementById("score5").value=""
+         document.getElementById("grade5").value =""
+         document.getElementById("point5").value =""
+         alert("PLEASE ENTER A VALID NUMBER")
+         }
+       else if (isNaN(score5.value)) {
+          alert("PLEASE ENTER A VALID NUMBER")
+          document.getElementById("score5").value=""
+          document.getElementById("grade5").value =""
+          document.getElementById("point5").value =""
+       }
+
+  }
+
+  function myresult6() {
+    var grade6 ; point6; score6 ;
+  //  var point1 = point.tofixed(2)
+    if ( (score6.value >= 70) && (score6.value < 101 ) )  {
+          grade6 = "A"
+          point6 = "5.0"
+          document.getElementById("grade6").value = grade6
+          document.getElementById("point6").value = point6
+
+      }
+      else if( (score6.value >= 60 ) && (score6.value < 69)  )  {
+             grade6 = "B"
+             point6 = "4.0"
+             document.getElementById("grade6").value = grade6
+             document.getElementById("point6").value = point6
+
+      }
+
+      else if ((score6.value >= 50 ) && (score6.value <59)) {
+          grade6 = "C"
+          point6 = "3.0"
+          document.getElementById("grade6").value = grade6
+          document.getElementById("point6").value = point6
+      }
+      else if( (score6.value >= 40 ) && (score6.value <49) )  {
+              grade6 = "D"
+              point6 = "2.0"
+              document.getElementById("grade6").value = grade6
+              document.getElementById("point6").value = point6
+      }
+      else if ((score6.value >= 30 ) && (score6.value<39))  {
+            grade6 = "D"
+            point6 = "1.0"
+            document.getElementById("grade6").value = grade6
+            document.getElementById("point6").value = point6
+      }
+      else if ((score2.value >= 0 ) && (score2.value <29)) {
+          grade6 = "F"
+          point6 = "0.0"
+          document.getElementById("grade6").value = grade6
+          document.getElementById("point6").value = point6
+
+      }
+      else if (score6.value >100)  {
+         alert("PLEASE ENTER A VALID NUMBER")
+         document.getElementById("score6").value=""
+         document.getElementById("grade6").value =""
+         document.getElementById("point6").value =""
+         }
+       else if (isNaN(score6.value)) {
+          alert("PLEASE ENTER A VALID NUMBER")
+          document.getElementById("score6").value =""
+          document.getElementById("grade6").value = ""
+          document.getElementById("point6").value = ""
+
+       }
+
+  }
+
+
+    function myresult7() {
+      var grade7 ; point7; score7 ;
+    //  var point1 = point.tofixed(2)
+      if ( (score7.value >= 70) && (score7.value < 100 ) )  {
+            grade7 = "A"
+            point7 = "5.0"
+            document.getElementById("grade7").value = grade7
+            document.getElementById("point7").value = point7
+
+        }
+        else if( (score7.value >= 60 ) && (score7.value < 69)  )  {
+
+               grade7 = "B"
+               point7 = "4.0"
+               document.getElementById("grade7").value = grade7
+               document.getElementById("point7").value = point7
+
+        }
+
+        else if ((score7.value >= 50 ) && (score7.value <59)) {
+            grade7 = "C"
+            point7 = "3.0"
+            document.getElementById("grade7").value = grade7
+            document.getElementById("point7").value = point7
+        }
+        else if( (score7.value >= 40 ) && (score7.value <49) )  {
+                grade7 = "D"
+                point7 = "2.0"
+                document.getElementById("grade7").value = grade7
+                document.getElementById("point7").value = point7
+        }
+        else if ((score7.value >= 30 ) && (score7.value<39))  {
+              grade7 = "D"
+              point7 = "1.0"
+              document.getElementById("grade7").value = grade7
+              document.getElementById("point7").value = point7
+        }
+        else if ((score7.value >= 0 ) && (score7.value <29)){
+            grade7 = "F"
+            point7 = "0.0"
+            document.getElementById("grade7").value = grade7
+            document.getElementById("point7").value = point7
+
+        }
+        else if (score7.value >100)  {
+           document.getElementById("score7").value=""
+           document.getElementById("grade7").value =""
+           document.getElementById("point7").value =""
+           alert("PLEASE ENTER A VALID NUMBER")
+           }
+         else if (isNaN(score7.value)) {
+            alert("PLEASE ENTER A VALID NUMBER")
+            document.getElementById("score7").value=""
+            document.getElementById("grade7").value =""
+            document.getElementById("point7").value =""
+
+         }
+
+    }
+
+
+function calculate(e) {
+  e.preventDefault
+//assigning the points to variable
+
+        var spoint1 =  document.getElementById("point1")
+        var spoint2 =  document.getElementById("point2")
+        var spoint3 =  document.getElementById("point3")
+        var spoint4 =  document.getElementById("point4")
+        var spoint5 =  document.getElementById("point5")
+        var spoint6 =  document.getElementById("point6")
+        var spoint7 =  document.getElementById("point7")
+  //assigning course unit to a variable called unit1-unit7
+        var unit1 =  document.getElementById("unit1")
+        var unit2 =  document.getElementById("unit2")
+        var unit3 =  document.getElementById("unit3")
+        var unit4 =  document.getElementById("unit4")
+        var unit5 =  document.getElementById("unit5")
+        var unit6 =  document.getElementById("unit6")
+        var unit7 =  document.getElementById("unit7")
+    // add the total units
+      total_units = (parseInt(unit1.value) + parseInt(unit2.value) + parseInt(unit3.value) +
+      parseInt(unit4.value) + parseInt(unit5.value) + parseInt(unit6.value) + parseInt(unit7.value) )
+//multiply unit with  grade and assign it to a variable
+      var weight1 = parseInt(unit1.value) * parseInt(spoint1.value)
+      var weight2 = parseInt(unit2.value) * parseInt(spoint2.value)
+      var weight3 = parseInt(unit3.value) * parseInt(spoint3.value)
+      var weight4 = parseInt(unit4.value) * parseInt(spoint4.value)
+      var weight5 = parseInt(unit5.value) * parseInt(spoint5.value)
+      var weight6 = parseInt(unit6.value) * parseInt(spoint6.value)
+      var weight7 = parseInt(unit7.value) * parseInt(spoint7.value)
+// sum up the weight
+      var total_weights =  (parseInt(weight1) + parseInt(weight2) + parseInt(weight3)
+      + parseInt(weight4) + parseInt(weight5) + parseInt(weight6) + parseInt(weight7))
+      var final_cgpa = parseInt(total_weights) / parseInt(total_units)
+      document.getElementById("result").value = final_cgpa.toFixed(2)
+      return
+
+
+}
+
+
+function button1(){
+    var score1 =document.getElementById("score1")
+    var score2 =document.getElementById("score2")
+    var score3 =document.getElementById("score3")
+    var score4 =document.getElementById("score4")
+    var score5 =document.getElementById("score5")
+    var score6 =document.getElementById("score6")
+    var score7 =document.getElementById("score7")
+    while ((score1.value !="") && (score2.value !="") && (score3.value !="") && (score4.value !="") &&
+          (score5.value !="") && (score6.value !="") && (score7.value !=""))
+          {
+          calculate(result)
+          result = document.getElementById("result").value
+          
+          return true
+      }
+      alert("PLEASE ENTER STUDENTS SCORE")
+      return false
+
+}
+
+//function to CLEAR or reset the the input box
+function button2(){
+   document.getElementById("form1").reset()
+}
+
+    </script>
+    </html>
